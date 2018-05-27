@@ -8,13 +8,18 @@ import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.relevantcodes.extentreports.LogStatus;
+
 import TestNG.JSONSchemas.TimeSlotSessionInfo.Session;
 import TestNG.JSONSchemas.TimeSlotSessionInfo.Speaker;
 import TestNG.JSONSchemas.TimeSlotSessionInfo.TimeSlotSessionInfo;
 import TestNG.framework.RestAssuredConfiguration;
+import TestNG.utils.ExtentReports.ExtentTestManager;
+import io.restassured.RestAssured;
 import io.restassured.mapper.ObjectMapper;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 public class IHS_EMAP_WSRest_Tests extends RestAssuredConfiguration{
@@ -39,9 +44,9 @@ public class IHS_EMAP_WSRest_Tests extends RestAssuredConfiguration{
 		//TODO Find out if there is another way to validate JSON response. 
 		
 		//Type 1
-		response.then().body("title",equalTo("TestNewTimeSlot"));
-		
-		
+		ValidatableResponse x = response.then().body("title",equalTo("TestNewTimeSlot"));
+		System.out.println(x.toString());
+		ExtentTestManager.getTest().log(LogStatus.INFO, "Test -- FIll info msg pending");
 		
 		//Type 2
 		TimeSlotSessionInfo timeSlotSessionInfo = response.as(TimeSlotSessionInfo.class, ObjectMapperType.GSON);
