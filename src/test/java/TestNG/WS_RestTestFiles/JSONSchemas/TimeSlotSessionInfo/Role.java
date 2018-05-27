@@ -1,5 +1,5 @@
 
-package TestNG.JSONSchemas.TimeSlotSessionInfo;
+package TestNG.WS_RestTestFiles.JSONSchemas.TimeSlotSessionInfo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -1,18 +1,12 @@
 package TestNG.tests;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-
 import java.util.List;
-
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import com.relevantcodes.extentreports.LogStatus;
-
-import TestNG.JSONSchemas.TimeSlotSessionInfo.Session;
-import TestNG.JSONSchemas.TimeSlotSessionInfo.Speaker;
-import TestNG.JSONSchemas.TimeSlotSessionInfo.TimeSlotSessionInfo;
+import TestNG.WS_RestTestFiles.JSONSchemas.TimeSlotSessionInfo.*;
 import TestNG.framework.RestAssuredConfiguration;
 import TestNG.utils.ExtentReports.ExtentTestManager;
 import io.restassured.RestAssured;
