@@ -1,0 +1,18 @@
+{
+  "id": 0,
+  "speakerId": 0,
+  "contactType": {
+    "id": 1,
+    "name": "name",
+    "data": {},
+    "order": 0,
+    "delete": true
+  },
+  "name": "name",
+  "title": "title",
+  "company": "company",
+  "phone": "phone",
+  "mobile": "mobile",
+  "email": "email",
+  "additionalInfo": "additionalInfo"
+}

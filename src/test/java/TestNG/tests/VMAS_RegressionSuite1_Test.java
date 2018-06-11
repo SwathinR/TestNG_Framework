@@ -14,7 +14,7 @@ import TestNG.pageObjects.VMAS_LoginPage;
 
 public class VMAS_RegressionSuite1_Test extends BaseTest{
 
-	@Test(priority=0,enabled=true)
+	//@Test(priority=0,enabled=true)
 	public void Test1_Verify_Invalid_LoginCredentials_ErrorMessage()throws Exception{
 
 		VMAS_LoginPage loginPage = new VMAS_LoginPage(driver);
@@ -24,14 +24,14 @@ public class VMAS_RegressionSuite1_Test extends BaseTest{
 				"Check account status.","Expected message does not match actual message");
 	}
 	
-	@DataProvider(name="credentials")
+	//@DataProvider(name="credentials")
 	public static Object[][] dp2()throws Exception{
 		Object[][] data = DataFilesReader.ReadExcelSpreadSheet(System.getProperty("user.dir")+"/src/test/java/TestNG/testDataFiles/Excelread.xlsx", "Credentials");
 		return data;
 	}
 
 
-	@Test(priority=1,enabled=true,dataProvider="credentials")
+	//@Test(priority=1,enabled=true,dataProvider="credentials")
 	public void Test2_Verify_Successful_Login_to_VMASApp(String UserName, String Password)throws Exception{
 		VMAS_LoginPage loginPage = new VMAS_LoginPage(driver);
 		VMAS_HomePage homePage = new VMAS_HomePage(driver);
@@ -40,7 +40,7 @@ public class VMAS_RegressionSuite1_Test extends BaseTest{
 		homePage.verifyPresenceOfHomePageElements();
 	}
 
-	@Test(priority=2,enabled=false)
+	//@Test(priority=2,enabled=false)
 	public void Test3_Verify_AddSubMenu() throws Exception{
 		VMAS_HomePage homePage = new VMAS_HomePage(driver);
 		VMAS_AdminManagement adminMgmtPage = new VMAS_AdminManagement(driver); 
@@ -95,7 +95,7 @@ public class VMAS_RegressionSuite1_Test extends BaseTest{
 
 	}*/
 
-	@Test(priority=3,enabled=false)
+	//@Test(priority=3,enabled=false)
 	public void Test4_Verify_AddMainMenu()throws Exception{
 		VMAS_HomePage homePage = new VMAS_HomePage(driver);
 		VMAS_AdminManagement adminMgmtPage = new VMAS_AdminManagement(driver); 

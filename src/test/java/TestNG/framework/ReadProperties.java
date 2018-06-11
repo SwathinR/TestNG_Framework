@@ -20,6 +20,7 @@ public static Properties objConfig = new Properties();
 			System.setProperty("test.webDriverWait", objConfig.getProperty("test.webDriverWait"));
 			System.setProperty("test.enableScreenshotCapture", objConfig.getProperty("test.enableScreenshotCapture"));
 			System.setProperty("test.browser", objConfig.getProperty("test.browser"));
+			System.setProperty("test.WebApp", objConfig.getProperty("test.WebApp"));
 			System.out.println("Load All Config Successful");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
